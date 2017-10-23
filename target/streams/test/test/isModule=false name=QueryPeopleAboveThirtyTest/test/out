@@ -1,0 +1,35 @@
+[0m[[0minfo[0m] [0m[32mQueryPeopleAboveThirtyTest:[0m[0m
+[0m[[0minfo[0m] [0m[32m- test initializing spark context[0m[0m
+[0m[[0minfo[0m] [0m[31m- test the query of people above 30 *** FAILED ***[0m[0m
+[0m[[0minfo[0m] [0m[31m  org.apache.spark.SparkException: Only one SparkContext may be running in this JVM (see SPARK-2243). To ignore this error, set spark.driver.allowMultipleContexts = true. The currently running SparkContext was created at:[0m[0m
+[0m[[0minfo[0m] [0m[31morg.apache.spark.SparkContext.<init>(SparkContext.scala:77)[0m[0m
+[0m[[0minfo[0m] [0m[31mQueryPeopleAboveThirtyTest$$anonfun$1.apply(QueryPeopleAboveThirtyTest.scala:11)[0m[0m
+[0m[[0minfo[0m] [0m[31mQueryPeopleAboveThirtyTest$$anonfun$1.apply(QueryPeopleAboveThirtyTest.scala:8)[0m[0m
+[0m[[0minfo[0m] [0m[31morg.scalatest.OutcomeOf$class.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0minfo[0m] [0m[31morg.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0minfo[0m] [0m[31morg.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0minfo[0m] [0m[31morg.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
+[0m[[0minfo[0m] [0m[31morg.scalatest.FunSuiteLike$$anon$1.apply(FunSuiteLike.scala:186)[0m[0m
+[0m[[0minfo[0m] [0m[31morg.scalatest.TestSuite$class.withFixture(TestSuite.scala:196)[0m[0m
+[0m[[0minfo[0m] [0m[31morg.scalatest.FunSuite.withFixture(FunSuite.scala:1560)[0m[0m
+[0m[[0minfo[0m] [0m[31morg.scalatest.FunSuiteLike$class.invokeWithFixture$1(FunSuiteLike.scala:183)[0m[0m
+[0m[[0minfo[0m] [0m[31morg.scalatest.FunSuiteLike$$anonfun$runTest$1.apply(FunSuiteLike.scala:196)[0m[0m
+[0m[[0minfo[0m] [0m[31morg.scalatest.FunSuiteLike$$anonfun$runTest$1.apply(FunSuiteLike.scala:196)[0m[0m
+[0m[[0minfo[0m] [0m[31morg.scalatest.SuperEngine.runTestImpl(Engine.scala:289)[0m[0m
+[0m[[0minfo[0m] [0m[31morg.scalatest.FunSuiteLike$class.runTest(FunSuiteLike.scala:196)[0m[0m
+[0m[[0minfo[0m] [0m[31morg.scalatest.FunSuite.runTest(FunSuite.scala:1560)[0m[0m
+[0m[[0minfo[0m] [0m[31morg.scalatest.FunSuiteLike$$anonfun$runTests$1.apply(FunSuiteLike.scala:229)[0m[0m
+[0m[[0minfo[0m] [0m[31morg.scalatest.FunSuiteLike$$anonfun$runTests$1.apply(FunSuiteLike.scala:229)[0m[0m
+[0m[[0minfo[0m] [0m[31morg.scalatest.SuperEngine$$anonfun$traverseSubNodes$1$1.apply(Engine.scala:396)[0m[0m
+[0m[[0minfo[0m] [0m[31morg.scalatest.SuperEngine$$anonfun$traverseSubNodes$1$1.apply(Engine.scala:384)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.apache.spark.SparkContext$$anonfun$assertNoOtherContextIsRunning$2.apply(SparkContext.scala:2223)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.apache.spark.SparkContext$$anonfun$assertNoOtherContextIsRunning$2.apply(SparkContext.scala:2219)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at scala.Option.foreach(Option.scala:257)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.apache.spark.SparkContext$.assertNoOtherContextIsRunning(SparkContext.scala:2219)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.apache.spark.SparkContext$.markPartiallyConstructed(SparkContext.scala:2292)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.apache.spark.SparkContext.<init>(SparkContext.scala:86)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at QueryPeopleAboveThirtyTest$$anonfun$2.apply(QueryPeopleAboveThirtyTest.scala:22)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at QueryPeopleAboveThirtyTest$$anonfun$2.apply(QueryPeopleAboveThirtyTest.scala:19)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$class.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0minfo[0m] [0m[31m  ...[0m[0m
