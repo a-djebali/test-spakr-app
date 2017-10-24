@@ -1,20 +1,29 @@
 import org.apache.spark.sql.SparkSession
-import org.apache.spark.sql.functions._
 import org.scalatest.FunSuite
+
+/**
+  * ChallengeAppTests.scala:
+    Here lives all the necessary tests for our spark application
+
+  To run from terminal:
+      - cd into the ChallengeApp directory
+      - sbt test > test-result.txt(test and save the result into a text file)
+  */
 
 class ChallengeAppTests extends FunSuite {
 
-  test("[TEST] Creating SparkSession") {
+  test("[TEST 1] Creating SparkSession") {
     var sparkSession = SparkSession.builder()
       .appName("ChallengeApp")
       .master("local[2]")
       .config("some-config","test")
       .getOrCreate()
 
+    // Use global SparkSession for testing
     assert(sparkSession.conf.get("some-config") == "test")
   }
 
-  test("[TEST] Number of records (genres) is 40") {
+  test("[TEST 2] Test the query, the number of records must be 40") {
     var sparkSession = SparkSession.builder().getOrCreate()
 
     val df1 = sparkSession.sqlContext
@@ -22,49 +31,20 @@ class ChallengeAppTests extends FunSuite {
       .format("com.databricks.spark.csv")
       .option("header",true)
       .csv("hdfs://localhost:54310/maf-datalake/anime.csv")
-      .withColumn("genre", split(col("genre"), ", "))
 
-    val df2 = df1.selectExpr("anime_id","name","genre","type",
-      "cast(episodes as int) episodes",
-      "cast(rating as double) rating",
-      "cast(members as int) members")
+    val df2 = ETL.CastDataTypes(df1)
 
-    df2.createOrReplaceTempView("anime") // Register the DataFrame as a SQL temporary view
-    val tvSeries = sparkSession.sqlContext.sql("SELECT * FROM anime WHERE type = 'TV'")
+    val result = Queries.TopTenMostRatedTvSeries(sparkSession,df2)
 
-    val res = tvSeries.where(col("episodes") > 10)
-      .select(explode(col("genre")) as "g", col("rating"))
-      .groupBy("g")
-      .agg(sum("rating").alias("r"))
-      .sort(col("r").desc)
-
-    assert(res.count() == 40)
+    assert(result.count() == 40)
   }
 
-  test("[TEST] Ten most rated genres are Comedy") {
-    var sparkSession = SparkSession.builder().getOrCreate()
-
-    val df1 = sparkSession.sqlContext
-      .read
-      .format("com.databricks.spark.csv")
-      .option("header",true)
-      .csv("hdfs://localhost:54310/maf-datalake/anime.csv")
-      .withColumn("genre", split(col("genre"), ", "))
-
-    val df2 = df1.selectExpr("anime_id","name","genre","type",
-      "cast(episodes as int) episodes",
-      "cast(rating as double) rating",
-      "cast(members as int) members")
-
-    df2.createOrReplaceTempView("anime") // Register the DataFrame as a SQL temporary view
-    val tvSeries = sparkSession.sqlContext.sql("SELECT * FROM anime WHERE type = 'TV'")
-
-    val res = tvSeries.where(col("episodes") > 10)
-      .select(explode(col("genre")) as "g", col("rating"))
-      .groupBy("g")
-      .agg(sum("rating").alias("r"))
-      .sort(col("r").desc)
-
-    assert(res.count() == 40)
-  }
+  /*
+  Other tests
+    - Test that the result should contain all of the ten most rated genres
+    - Test dataframe of the query that determines the ten most rated genres is equal with the expected result
+    - Test the values of the query with the values of the expected result (value by value)
+    - Test unequal dataframes should not be equal when length differs
+    - ...
+   */
 }

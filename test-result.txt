@@ -1,0 +1,16 @@
+[0m[[0minfo[0m] [0mLoading global plugins from /home/geek-tech/.sbt/0.13/staging/64bc0b786e0fe89903c7/plugins[0m
+[0m[[0minfo[0m] [0mLoading project definition from /home/geek-tech/IdeaProjects/ChallengeApp/project[0m
+[0m[[0minfo[0m] [0mSet current project to ChallengeApp (in build file:/home/geek-tech/IdeaProjects/ChallengeApp/)[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/geek-tech/IdeaProjects/ChallengeApp/target/scala-2.11/classes...[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/geek-tech/IdeaProjects/ChallengeApp/target/scala-2.11/test-classes...[0m
+[0m[[0minfo[0m] [0m[32mChallengeAppTests:[0m[0m
+[0m[[0minfo[0m] [0m[32m- [TEST 1] Creating SparkSession[0m[0m
+[0m[[0minfo[0m] [0m[32m- [TEST 2] Test the query, the number of records must be 40[0m[0m
+[0m[[0minfo[0m] [0mScalaTest[0m
+[0m[[0minfo[0m] [0m[36mRun completed in 30 seconds, 449 milliseconds.[0m[0m
+[0m[[0minfo[0m] [0m[36mTotal number of tests run: 2[0m[0m
+[0m[[0minfo[0m] [0m[36mSuites: completed 1, aborted 0[0m[0m
+[0m[[0minfo[0m] [0m[36mTests: succeeded 2, failed 0, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0minfo[0m] [0m[32mAll tests passed.[0m[0m
+[0m[[0minfo[0m] [0mPassed: Total 2, Failed 0, Errors 0, Passed 2[0m
+[0m[[32msuccess[0m] [0mTotal time: 45 s, completed Oct 24, 2017 5:35:46 AM[0m

@@ -1,1 +1,17 @@
-[0m[[0mdebug[0m] [0mJar uptodate: /home/geek-tech/IdeaProjects/ChallengeApp/target/scala-2.11/challengeapp_2.11-0.1.jar[0m
+[0m[[0minfo[0m] [0mPackaging /home/geek-tech/IdeaProjects/ChallengeApp/target/scala-2.11/challengeapp_2.11-0.1.jar ...[0m
+[0m[[0mdebug[0m] [0mInput file mappings:[0m
+[0m[[0mdebug[0m] [0m	ETL$.class[0m
+[0m[[0mdebug[0m] [0m	  /home/geek-tech/IdeaProjects/ChallengeApp/target/scala-2.11/classes/ETL$.class[0m
+[0m[[0mdebug[0m] [0m	Queries.class[0m
+[0m[[0mdebug[0m] [0m	  /home/geek-tech/IdeaProjects/ChallengeApp/target/scala-2.11/classes/Queries.class[0m
+[0m[[0mdebug[0m] [0m	Program$$anonfun$1.class[0m
+[0m[[0mdebug[0m] [0m	  /home/geek-tech/IdeaProjects/ChallengeApp/target/scala-2.11/classes/Program$$anonfun$1.class[0m
+[0m[[0mdebug[0m] [0m	Queries$.class[0m
+[0m[[0mdebug[0m] [0m	  /home/geek-tech/IdeaProjects/ChallengeApp/target/scala-2.11/classes/Queries$.class[0m
+[0m[[0mdebug[0m] [0m	ChallengeApp$.class[0m
+[0m[[0mdebug[0m] [0m	  /home/geek-tech/IdeaProjects/ChallengeApp/target/scala-2.11/classes/ChallengeApp$.class[0m
+[0m[[0mdebug[0m] [0m	ChallengeApp.class[0m
+[0m[[0mdebug[0m] [0m	  /home/geek-tech/IdeaProjects/ChallengeApp/target/scala-2.11/classes/ChallengeApp.class[0m
+[0m[[0mdebug[0m] [0m	ETL.class[0m
+[0m[[0mdebug[0m] [0m	  /home/geek-tech/IdeaProjects/ChallengeApp/target/scala-2.11/classes/ETL.class[0m
+[0m[[0minfo[0m] [0mDone packaging.[0m

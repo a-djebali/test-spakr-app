@@ -4,7 +4,7 @@
 		module="challengeapp-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20171023091648"
+		publication="20171024044408"
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>
