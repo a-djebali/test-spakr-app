@@ -32,9 +32,9 @@ class ChallengeAppTests extends FunSuite {
       .option("header",true)
       .csv("hdfs://localhost:54310/maf-datalake/anime.csv")
 
-    val df2 = ETL.CastDataTypes(df1)
+    val df2 = PreProcessing.CastDataTypes(df1)
 
-    val result = Queries.TopTenMostRatedTvSeries(sparkSession,df2)
+    val result = Recommendations.TopTenMostRatedTvSeries(sparkSession,df2)
 
     assert(result.count() == 40)
   }

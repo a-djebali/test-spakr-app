@@ -1,7 +1,7 @@
 import org.apache.spark.sql.{SparkSession, DataFrame}
 import org.apache.spark.sql.functions.{col, explode, sum}
 
-object Queries {
+object Recommendations {
   def TopTenMostRatedTvSeries (sparkSession: SparkSession, DataSource: DataFrame): DataFrame = {
 
     // Select only TV series
@@ -16,5 +16,20 @@ object Queries {
       .sort(col("r").desc)
 
     df2
+  }
+
+  // Other applications
+
+  def UserRecommendedGenres (): Unit = {
+    // ....
+  }
+
+
+  def UserRecommendedTvSeries (): Unit = {
+    // ....
+  }
+
+  def UserRecommendedTvMovies (): Unit = {
+    // ....
   }
 }
