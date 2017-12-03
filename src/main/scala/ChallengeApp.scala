@@ -28,8 +28,8 @@ object ChallengeApp {
       .read
       .format("com.databricks.spark.csv")
       .option("header",true) // We can add ".option("inferSchema",true)" to automatically detect DataTypes, but unfortunately sometimes doesn't work correctly
-      .csv("hdfs://localhost:54310/maf-datalake/anime.csv") // or read directly from the file
-
+      .csv("../../test/resources/data/anime.csv") // or read directly from the file
+      // ../src/test/resources/data
     // Transform data in a good shape for better querying
     val df2 = PreProcessing.CastDataTypes(df1)
 
@@ -64,8 +64,6 @@ object ChallengeApp {
 
 
     // ==> App2 ...
-
-
 
     // Stop the Spark Session
     sparkSession.stop()
